@@ -1,11 +1,12 @@
 <?php
-namespace DBsystem74I\database;
-use DBsystem74I\database\DataBase;
+namespace DBsystem74I\Database;
+use DBsystem74I\Database\DataBase;
 
 use PDO;
 use PDOException;
+require  __DIR__ .  "/../config/app.php";
 
-require_once config['path']['methods'];
+require_once config['path']['methods'];;
 
 class DB implements DataBase
 {

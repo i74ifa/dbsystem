@@ -1,5 +1,5 @@
 <?php
-namespace DBsystem74I\database;
+namespace DBsystem74I\Database;
 
 class Blueprint
 {

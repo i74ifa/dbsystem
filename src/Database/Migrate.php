@@ -1,8 +1,8 @@
 <?php
-namespace DBsystem74I\database;
+namespace DBsystem74I\Database;
 
 
-use DBsystem74I\database\Blueprint;
+use DBsystem74I\Database\Blueprint;
 
 require_once getcwd() . '/config/app.php';
 require config['path']['queryFunction'];
