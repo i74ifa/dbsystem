@@ -21,12 +21,12 @@ define(
     // Paths files
 
     'path' => [
-      'queryFunction' => $root . '../Database/query.php',
       'BluePrint'     => $root . '../Database/BluePrint.php',
       'Database'      => $root . '../Database/Database.php',
-      'Migrate'       => $root . '../Database/Migrate.php',
       'DB'            => $root . '../Database/DB.php',
       'Connect'       => $root . '../Database/connect.php',
+      'queryFunction' => $root . '../Migration/query.php',
+      'Migrate'       => $root . '../Migration/Migrate.php',
       'methods'       => $root . '../config/methods.php',
     ]
   ]

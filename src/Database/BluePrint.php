@@ -1,4 +1,5 @@
 <?php
+
 namespace DBsystem74I\Database;
 
 class Blueprint
@@ -7,29 +8,45 @@ class Blueprint
      * - Data type: `INT`
      * - From : `-2,147,483,648`
      * - TO  :   `2,147,483,648`
+     * - True Or False if you enable any Features 
+     * @param mixed $name name Column
+     * @param bool $Auto_increment True or false
+     * @param bool $Unique true or false
+     * @param bool $primary_key true or false
      */
-    public function Integer($name, $Auto_increment = null, $Unique = null, $primary_key = null)
+    public function Integer($name, $Auto_increment = false, $Unique = false, $primary_key = false)
     {
-        $sql = "`$name` INT" . ($Auto_increment != null ? ' AUTO_INCREMENT' : null) . ($Unique != null ? ' UNIQUE' : null)
-            . ($primary_key != null ? ' PRIMARY KEY' : NULL);
+        $sql = "`$name` INT" . ($Auto_increment ? ' AUTO_INCREMENT' : null) . ($Unique ? ' UNIQUE' : null)
+            . ($primary_key ? ' PRIMARY KEY' : NULL);
         return $sql;
     }
     /**
      * - Data type: `TEXT`
      * - TO  :  non-Unicode data with a maximum`2,147,483,647`
+     *     /**
+     * - Data type: `INT`
+     * - From : `-2,147,483,648`
+     * - TO  :   `2,147,483,648`
+     * - True Or False if you enable any Features 
+     * @param mixed $name name Column
+     * @param bool $Unique true or false
+     * @param bool $primary_key true or false
      */
-    public function String($name, $Unique = null)
+    public function String($name, $Unique = false, $primary_key = false)
     {
-        $sql = "`$name` TEXT" .  ($Unique != null ? ' UNIQUE' : null);
+        $sql = "`$name` TEXT" .  ($Unique ? ' UNIQUE' : null) . ($primary_key ? ' PRIMARY KEY ' : null);
         return $sql;
     }
     /**
      * - Data type: `Varchar`
      * Maximum length of `2E + 31` characters, Variable-length non-Unicode data (SQL Server 2005 only).
+     * @param mixed $name name Column
+     * @param int $Unique Number of Digit
+     * @param bool $primary_key true or false
      */
     public function Varchar($name, $count, $Unique = null)
     {
-        $sql = "`$name` VARCHAR($count)" . ($Unique != null ? ' UNIQUE' : null);
+        $sql = "`$name` VARCHAR($count)" . ($Unique ? ' UNIQUE' : null);
         return $sql;
     }
     /**
@@ -37,7 +54,7 @@ class Blueprint
      * - if You need Custom name Columns Enter Value to Like: 
      *    -- $names = 'nameOne, nameTwo'
      */
-    public function Timestamps($names = null)
+    public function Timestamps($names = false)
     {
         $One = "created_at";
         $Two = "updated_at";
