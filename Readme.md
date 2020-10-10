@@ -11,67 +11,56 @@
   - INT
   - TEXT
   - VARCHAR
+  - BigIneger
   - Timestamps [created_at & updated_at]
 
 ## How to Setup
 
-- copy folders database & config to folders your `Project`
+- Install Library
+  composer require i74ifa/dbsystem
 
-  - _database/_
-    - _BluePrint.php_
-    - _connect.php_
-    - _Database.php_
-    - _DB.php_
-    - _migrate.php_
-  - _config/_
-    - _app.php_
-    - _database.php_
+## how to Use
 
-- edit paths files in config/app.php [`paths`]
+- `you need Session because the error storage on $_SESSION['errors']`
 
-  - 'path' => [
+        session_start();
+        require "vendor/autoload.php";
+        use DBsystem74I\Database\DB;
 
-    'queryFunction => 'where query.php',<br />
-    'BluePrint => 'where Blueprint.php',<br />
-    etc...
+        $DB = new DB;
 
-    ]
+* You have var `$DB`
 
-### if you use System file in URL
-
-- require classes when you need
-
-### if you use System .htaccess
-
-- require all Classes in index.php
-
-## `how to Use`
-
-- You now var `$DB` is new DB
-
-- SELECT DATA
+### SELECT DATA
 
       $result = $DB->table('nametable')->Select(['*'])->run();
 
-- Insert Data
+      foreach ($result as $row) {
+        echo $row['nameCol1'] . '<br>';
+        echo $row['nameCol2'] . '<br>';
+      }
+
+### Insert Data
 
   - you have two method to insert INSERT() & INSERTCol()
   - `INSERT()`
 
-    - this function to insert to all Columns
+    - this function to insert all Columns
 
       - you don't need type name Column
 
-        - like this
+              //Data in Table users
+              |---------------------------------|
+              | id | name | username | password |
 
-              ------------------------
-              | id | name | username |
+      - INSERT to All Columns :
 
-        - if you have this in Table type :
-
-                $DB->table('users')->INSERT([1, 'anyName', 'username'])->run();
+            $DB->table('users')->INSERT([1, 'anyName', 'username', 'Password'])->run();
 
   - `INSERTCol()`
+
     - Use this Method if you don't need insert Columns NULL or id is AUTO_INCREMENT()
 
            $DB->table('users')->INSERTCol(['name', 'username'], ['value name', 'value username'])->run();
+  
+### Migration Data Table
