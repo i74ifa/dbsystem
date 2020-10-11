@@ -22,8 +22,6 @@ define(
 
     'path' => [
       'BluePrint'     => $root . '../Database/BluePrint.php',
-      'Database'      => $root . '../Database/Database.php',
-      'DB'            => $root . '../Database/DB.php',
       'Connect'       => $root . '../Database/connect.php',
       'queryFunction' => $root . '../Migration/query.php',
       'Migrate'       => $root . '../Migration/Migrate.php',
