@@ -10,7 +10,6 @@
             "email": "i74ifa@icloud.com"
         }
     ],
-    "version": "0.3",
     "type": "library",
     "require": {
 		"php": ">=7.1"
