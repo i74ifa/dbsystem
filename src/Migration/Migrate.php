@@ -2,14 +2,16 @@
 
 namespace DBsystem74I\Migration;
 
-use DBsystem74I\Database\Blueprint;
 
 require_once __DIR__ . '/../config/app.php';
 require config['path']['queryFunction'];
 
+use DBsystem74I\Database\Blueprint;
 require_once config['path']['BluePrint'];
+
 require config['path']['Connect'];
 class Migrate
+
 {
     public function tables()
     {
@@ -33,7 +35,14 @@ class Migrate
     }
 }
 $db = new Migrate;
-
-Query('asspp', $db->tables()[0]);
-Query('asspp2', $db->tables()[0]);
-Query('asspp3', $db->tables()[0]);
+/**
+ * ### How to Query Table 
+ * 
+ * This Exam: Query('nameTable', $db->tables()[0] ))
+ * Detailing :
+ *    - Query()  is special for assembling 
+ *    - 'nameTable' is Name the Table for Create 
+ *    - $db->tables() is Function up tables
+ *    - [0] is Number Index Table in tables() function 
+ * 
+ */
