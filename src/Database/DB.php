@@ -8,7 +8,7 @@ use PDO;
 use PDOException;
 require  __DIR__ .  "/../config/app.php";
 
-require_once config['path']['methods'];;
+require_once config['path']['methods'];
 
 class DB implements DataBase
 {
