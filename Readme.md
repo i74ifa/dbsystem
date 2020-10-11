@@ -64,3 +64,7 @@
            $DB->table('users')->INSERTCol(['name', 'username'], ['value name', 'value username'])->run();
   
 ### Migration Data Table
+
++ This Option is Beta I use it 
+* Go in vendor/i74ifa/dbsystem/Migration/Migrate.php
+
