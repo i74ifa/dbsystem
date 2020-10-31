@@ -1,7 +1,7 @@
 
 ### Languages 
 
-[العربية](https://github.com/i74ifa/dbsystem/blob/main/Readme-ar.md)
+[العربية](https://github.com/i74ifa/dbsystem/blob/main/Readme-ar.md) - 
 [English](https://github.com/i74ifa/dbsystem/)
 
 
