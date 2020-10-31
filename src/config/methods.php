@@ -1,6 +1,14 @@
 <?php
 
-
+/**
+ * #### wrapping text with single quotation marks
+ * Like:
+ *    - array("Hi there", "Hi")
+ * - after wrapping 
+ *    - array("'hi'", "'Hi'")
+ *  
+ * 
+ */
 function CommaArray($array)
 {
   if (!is_array($array))

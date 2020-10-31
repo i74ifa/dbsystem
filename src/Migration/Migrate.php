@@ -7,7 +7,6 @@ require_once __DIR__ . '/../config/app.php';
 require config['path']['queryFunction'];
 
 use DBsystem74I\Database\Blueprint;
-require_once config['path']['BluePrint'];
 
 require config['path']['Connect'];
 class Migrate

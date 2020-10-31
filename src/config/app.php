@@ -21,7 +21,6 @@ define(
     // Paths files
 
     'path' => [
-      'BluePrint'     => $root . '../Database/BluePrint.php',
       'Connect'       => $root . '../Database/connect.php',
       'queryFunction' => $root . '../Migration/query.php',
       'Migrate'       => $root . '../Migration/Migrate.php',
